@@ -1,0 +1,35 @@
+{
+  "name": "verse",
+  "version": "1.0.0",
+  "description": "CRUD utilizando NodeJS como Back-End y MySQL como Base de datos",
+  "main": "src/index.js",
+  "scripts": {
+    "nodemon" : "nodemon src/index.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jose-rey/crudenodemysql.git"
+  },
+  "keywords": [
+    "CRUD",
+    "NodeJS",
+    "MySQL"
+  ],
+  "author": "José Alfredo Rey Méndez",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/jose-rey/crudenodemysql/issues"
+  },
+  "homepage": "https://github.com/jose-rey/crudenodemysql#readme",
+  "dependencies": {
+    "ejs": "^2.6.1",
+    "express": "^4.16.3",
+    "express-myconnection": "^1.0.4",
+    "morgan": "^1.9.0",
+    "mysql": "^2.15.0"
+  },
+  "devDependencies": {
+    "nodemon": "^1.17.4"
+  }
+}
