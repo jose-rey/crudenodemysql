@@ -1,0 +1,43 @@
+<!-- Se incluye la plantilla del header -->
+<% include templates/_header %>
+
+    <div class="container">
+        <div class="row justify-content-center">
+            <p class="display-4">
+                Nuevo Registro
+            </p>
+        </div>
+        <div class="row">
+            <table id="example">
+                <thead>
+                    <tr>
+                        <th>#</th>
+                        <th>RFC</th>
+                        <th>Nombre principal</th>
+                        <th>Nombre de la empresa</th>
+                        <th>Teléfono</th>
+                        <th>Fecha modificación</th>
+                        <th>Fecha creación</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <% if (data) {%>
+                        <% for(var index = 0; index < data.length; index++) { %>
+                            <tr>
+                                <td><%= (index + 1) %></td>
+                                <td><%= data[index].rfc %></td>
+                                <td><%= data[index].principalName %></td>
+                                <td><%= data[index].businessName %></td>
+                                <td><%= data[index].phone %></td>
+                                <td><%= data[index].modifiedDate %></td>
+                                <td><%= data[index].createdDate %></td>
+                            </tr>
+                        <% } %>
+                    <% } %>
+                </tbody>
+            </table>
+        </div>
+    </div>
+
+<!-- Se incluye la plantilla del footer-->
+<% include templates/_footer %>
