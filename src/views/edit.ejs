@@ -1,0 +1,69 @@
+<!-- Se incluye la plantilla del header -->
+<% include templates/_header %>
+
+    <div class="container">
+        <div class="row justify-content-center">
+            <p class="display-4">
+                Editar Registro
+            </p>
+        </div>
+        <div class="row justify-content-center ">
+            <form class="col-md-8 col-sm-10" action="/update/<%= data.id %>" method="POST">
+                <div class="form-group row">
+                    <label for="rfc" class="col-md-3 col-form-label">RFC</label>
+                    <div class="col-md-9">
+                        <input type="text" class="form-control" id="rfc" name="rfc" maxlength="18" value="<%= data.rfc %>" placeholder="RFC">
+                    </div>
+                </div>
+                <div class="form-group row">
+                    <label for="principalName" class="col-md-3 col-form-label">Nombre principal</label>
+                    <div class="col-md-9">
+                        <input type="text" class="form-control" id="principalName" name="principalName" value="<%= data.principalName %>" maxlength="50" placeholder="Principal Name"
+                            required>
+                    </div>
+                </div>
+                <div class="form-group row">
+                    <label for="businessName" class="col-md-3 col-form-label">Nombre de la empresa</label>
+                    <div class="col-md-9">
+                        <input type="text" class="form-control" id="businessName" name="businessName" value="<%= data.businessName %>" maxlength="80" placeholder="Business Name"
+                            required>
+                    </div>
+                </div>
+                <div class="form-group row">
+                    <label for="phone" class="col-md-3 col-form-label">Teléfono</label>
+                    <div class="col-md-9">
+                        <input type="tel" class="form-control" id="phone" name="phone" maxlength="10" value="<%= data.phone %>" placeholder="Teléfono" required>
+                    </div>
+                </div>
+                <div class="form-group row">
+                    <label for="email" class="col-md-3 col-form-label">Email</label>
+                    <div class="col-md-9">
+                        <input type="email" class="form-control" id="email" name="email" maxlength="80" value="<%= data.email %>" placeholder="Email" required>
+                    </div>
+                </div>
+                <div class="form-group row">
+                    <label for="modifiedDate" class="col-md-3 col-form-label">Fecha de modificación</label>
+                    <div class="col-md-9">
+                        <input type="text" class="form-control" id="modifiedDate" name="modifiedDate" value="<%= data.modifiedDate %>" readonly>
+                    </div>
+                </div>
+                <div class="form-group row">
+                    <label for="createdDate" class="col-md-3 col-form-label">Fecha de creación</label>
+                    <div class="col-md-9">
+                        <input type="text" class="form-control" id="createdDate" name="createdDate" value="<%= data.createdDate %>" maxlength="80" placeholder="Business Name"
+                        readonly>
+                    </div>
+                </div>
+                <div class="form-group row">
+                    <div class="offset-sm-7 col-sm-5 offset-md-8 col-md-4">
+                        <button type="submit" class="btn btn-primary btn-block">
+                            Actualizar
+                        </button>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <!-- Se incluye la plantilla del footer-->
+    <% include templates/_footer %>
