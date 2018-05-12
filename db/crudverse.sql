@@ -37,8 +37,8 @@ CREATE TABLE `registry` (
   `businessName` varchar(80) NOT NULL,
   `phone` int(10) NOT NULL,
   `email` varchar(80) NOT NULL,
-  `modifiedDate` date NOT NULL,
-  `createdDate` date NOT NULL
+  `modifiedDate` datetime NOT NULL,
+  `createdDate` datetime NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --

@@ -29,7 +29,7 @@ app.use(express.urlencoded({extended: false})); //Nos permite entender todos los
 app.use('/', registryRoutes); //Url principal
 
 //Archivos estaticos
-app.use(express.static(path.join(__dirname, 'public'))); //Archivos resource
+app.use(express.static(path.join(__dirname, '/public'))); //Archivos resource
 
 //Comienza servidor
 app.listen(app.get('port'), () => {

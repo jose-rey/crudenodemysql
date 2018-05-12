@@ -8,7 +8,7 @@
             </p>
         </div>
         <div class="row justify-content-center ">
-            <form class="col-md-8 col-sm-10" action="/update/<%= data.id %>" method="POST">
+            <form id="editar" class="col-md-8 col-sm-10" action="/update/<%= data.id %>" method="POST">
                 <div class="form-group row">
                     <label for="rfc" class="col-md-3 col-form-label">RFC</label>
                     <div class="col-md-9">
@@ -44,19 +44,19 @@
                 <div class="form-group row">
                     <label for="modifiedDate" class="col-md-3 col-form-label">Fecha de modificación</label>
                     <div class="col-md-9">
-                        <input type="text" class="form-control" id="modifiedDate" name="modifiedDate" value="<%= data.modifiedDate %>" readonly>
+                        <input type="text" class="form-control" id="modifiedDate" name="modifiedDate" value="<%= data.modifiedDate.toLocaleString() %>" readonly>
                     </div>
                 </div>
                 <div class="form-group row">
                     <label for="createdDate" class="col-md-3 col-form-label">Fecha de creación</label>
                     <div class="col-md-9">
-                        <input type="text" class="form-control" id="createdDate" name="createdDate" value="<%= data.createdDate %>" maxlength="80" placeholder="Business Name"
+                        <input type="text" class="form-control" id="createdDate" name="createdDate" value="<%= data.createdDate.toLocaleString() %>" maxlength="80" placeholder="Business Name"
                         readonly>
                     </div>
                 </div>
                 <div class="form-group row">
                     <div class="offset-sm-7 col-sm-5 offset-md-8 col-md-4">
-                        <button type="submit" class="btn btn-primary btn-block">
+                        <button type="submit" class="btn btn-primary btn-block actualizar">
                             Actualizar
                         </button>
                     </div>

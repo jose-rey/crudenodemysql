@@ -7,8 +7,13 @@
                 Registros
             </p>
         </div>
+        <div class="row justify-content-end">
+            <a href="/add" class="btn btn-info btn-block col-2">
+                <i class="fa fa-plus" aria-hidden="true"></i> Añadir
+            </a>
+        </div>
         <div class="row">
-            <table id="table" >
+            <table id="table" class="display responsive nowrap">
                 <thead>
                     <tr>
                         <th>#</th>
@@ -16,8 +21,8 @@
                         <th>Nombre principal</th>
                         <th>Nombre de la empresa</th>
                         <th>Teléfono</th>
-                        <th>Fecha modificación</th>
                         <th>Fecha creación</th>
+                        <th>Fecha modificación</th>
                         <th></th>
                     </tr>
                 </thead>
@@ -30,10 +35,10 @@
                                 <td><%= data[index].principalName %></td>
                                 <td><%= data[index].businessName %></td>
                                 <td><%= data[index].phone %></td>
-                                <td><%= data[index].modifiedDate.toLocaleString() %></td>
                                 <td><%= data[index].createdDate.toLocaleString() %></td>
-                                <td class="row"><a href="/update/<%= data[index].id %>" class="btn btn-info btn-block col-6"><i class="far fa-edit"></i></a>
-                                <a href="/delete/<%= data[index].id %>" class="btn btn-danger btn-block col-6"><i class="fas fa-times"></i></a></td>
+                                <td><%= data[index].modifiedDate.toLocaleString() %></td>
+                                <td class="row"><a href="/update/<%= data[index].id %>" class="btn btn-info btn-block "><i class="far fa-edit"></i></a>
+                                <a href="/delete/<%= data[index].id %>" class="btn btn-danger btn-block delete "><i class="fas fa-times"></i></a></td>
                             </tr>
                         <% } %>
                     <% } %>
