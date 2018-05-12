@@ -19,7 +19,7 @@ app.use(morgan('dev')); //Para escuchar las peticiones
 //Comprobamos si nos encontramos en el servidor heroku, con el add on de CLEARDB
 if(process.env.CLEARDB_DATABASE_URL) {
     //conexion con Heroku
-    connection = mysql.createConnection(process.env.CLEARDB_DATABASE_URL);
+    app.use(myConnection(mysql, process.env.CLEARDB_DATABASE_URL, 'single'));
   } else {
     //conexion local
     app.use(myConnection(mysql, {
