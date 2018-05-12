@@ -15,13 +15,21 @@ app.set('views', path.join(__dirname, 'views'));
 
 //Middlewares
 app.use(morgan('dev')); //Para escuchar las peticiones
-app.use(myConnection(mysql, {
-    host: 'localhost',
-    user: 'root',
-    password: '',
-    port: '3306',
-    database: 'crudverse'
-}, 'single'));
+
+//Comprobamos si nos encontramos en el servidor heroku, con el add on de CLEARDB
+if(process.env.JAWSDB_URL) {
+    //conexion con Heroku
+    connection = mysql.createConnection(process.env.CLEARDB_DATABASE_URL);
+  } else {
+    //conexion local
+    app.use(myConnection(mysql, {
+        host: 'localhost',
+        user: 'root',
+        password: '',
+        port: '3306',
+        database: 'crudverse'
+    }, 'single'));
+}
 
 app.use(express.urlencoded({extended: false})); //Nos permite entender todos los datos que vienen del formulario
 

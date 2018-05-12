@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Servidor: 127.0.0.1
--- Tiempo de generación: 11-05-2018 a las 06:35:45
+-- Tiempo de generación: 12-05-2018 a las 09:39:41
 -- Versión del servidor: 10.1.28-MariaDB
 -- Versión de PHP: 7.1.11
 
@@ -21,8 +21,6 @@ SET time_zone = "+00:00";
 --
 -- Base de datos: `crudverse`
 --
-CREATE DATABASE IF NOT EXISTS `crudverse` DEFAULT CHARACTER SET latin1 COLLATE latin1_swedish_ci;
-USE `crudverse`;
 
 -- --------------------------------------------------------
 
@@ -42,6 +40,13 @@ CREATE TABLE `registry` (
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
+-- Volcado de datos para la tabla `registry`
+--
+
+INSERT INTO `registry` (`id`, `rfc`, `principalName`, `businessName`, `phone`, `email`, `modifiedDate`, `createdDate`) VALUES
+(3, 'CUPU800825569', 'asda nuevo 10', 'asdas nuevo 10', 1212, 'asd@asd', '2018-05-12 00:12:15', '2018-05-11 17:32:11');
+
+--
 -- Índices para tablas volcadas
 --
 
@@ -59,7 +64,7 @@ ALTER TABLE `registry`
 -- AUTO_INCREMENT de la tabla `registry`
 --
 ALTER TABLE `registry`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=14;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
