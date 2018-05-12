@@ -17,7 +17,7 @@ app.set('views', path.join(__dirname, 'views'));
 app.use(morgan('dev')); //Para escuchar las peticiones
 
 //Comprobamos si nos encontramos en el servidor heroku, con el add on de CLEARDB
-if(process.env.JAWSDB_URL) {
+if(process.env.CLEARDB_DATABASE_URL) {
     //conexion con Heroku
     connection = mysql.createConnection(process.env.CLEARDB_DATABASE_URL);
   } else {
