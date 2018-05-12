@@ -8,7 +8,7 @@ controller.list = (req, res) => {
             if(err) {
                 res.json(err);
             }
-            console.log(elements);
+            //console.log(elements);
             res.render('index', {
                 data : elements
             });
@@ -29,7 +29,7 @@ controller.save = (req, res) => {
     req.getConnection((err, conn) => {
         //Se realiza un insert a la base de datos, pasando como parametros la informacion obtenida del formulario
         conn.query('INSERT INTO REGISTRY set ?', [data], (err, element) => {
-            console.log(element);
+            //console.log(element);
             res.redirect('/');
         })
     });
